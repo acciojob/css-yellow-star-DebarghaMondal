@@ -4,18 +4,36 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style>
+<style>
 .star {
-  color: yellow;
-	border:100px solid rgb(255, 255, 0);
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid yellow;
+  position: relative;
+}
+
+.star:after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid yellow;
+  transform: rotate(35deg);
+}
+	.star {
+  transform: rotate(-35deg);
 }
 </style>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
-	<span class="fa fa-star star"></span>
+	<div class="star"></div>
     <script type="text/javascript" src="./script.js">
 </script>
 
